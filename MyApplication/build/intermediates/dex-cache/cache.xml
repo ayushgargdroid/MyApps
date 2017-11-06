@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/1c3a8a461964973c4bb50fac6fd4951f742e8948/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_07a9c28bd3cfe759ad3b50a751ce18f5a7ba6b94/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/MyApps/MyApplication/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5d59dccf8d20d17424a65d89ecdbfa0e91db218e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/d101f763aee4fde16e0fde70c9d85df05ca79e1e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_eed41c39697ff9ebaf6676a039208fdb51a89409/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/MyApps/MyApplication/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b539bc9a20ee080406d8d70fac68bf3dc5ba1a45">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4e6f228809bb1585fe917f442e5fae4b3f53a083/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/987a2e0b828a7d1ba0d98f8635dda7d0318d799b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6c56e1eeb5f15954e566343dd4624b71185514e2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/6b32f914c6c11037a46be778f454cf707742389b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_58f9e7c1bfa45e18c968281d572afa3a8380583c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/826437bfa5d4d987ef96581cdcdd3b8dc082737e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c1031a68ceab18393aedc1d926fd6a03447da04/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/4b55fcd7a9f4bd9d0d222d0b37b3948fd85431dc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_36c6732330c900df8007c0a383e4a9faa0af1dec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_4b2a1f58c27f4df404654073b40502aa68685877/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_774565ffd5d14546d9b13e5fdd1392ca03f643b3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/7dba56bea2a3628d1fc9be579d156934ea98e125/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_54f5867e0d27a6b629400b3edfc0d3b8a828e37b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/bfcd353688f6c09e670b9e65443aabbac69a3161/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9007c6b768fab7c095d9d5322ccbaf0457148582/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cb4dce92146adbce287a2b770fe6c4d8503249b6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/feffa6b09b54a0a8c60e555bea07bd2acffea0a4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_53dc491d04e9102c85fce5c97fde24473fd029a9/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_268704ce2ca3b956b6aba70a04b2c07e29f975fa/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/ecbd0b70d9e5b3aa55c368a0c2b3da77e7967e3f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_82d17ff06f77f605f6039cb033f9b45f54453c5e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/ayush/.android/build-cache/d02dade93cb2be0f4d69270fed3bd0a799405dab/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.3"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bd69e8a2185b8966dbd821000c58ff769ddbba23/classes.dex" />
+    </item>
+
+</items>

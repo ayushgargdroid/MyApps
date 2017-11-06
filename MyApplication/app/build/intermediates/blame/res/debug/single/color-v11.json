@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    }
+]

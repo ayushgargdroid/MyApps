@@ -1,0 +1,7 @@
+#Tue Oct 17 12:21:38 IST 2017
+base.0=/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5d59dccf8d20d17424a65d89ecdbfa0e91db218e
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4e6f228809bb1585fe917f442e5fae4b3f53a083/classes.dex
+base.1=/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_4e6f228809bb1585fe917f442e5fae4b3f53a083
+file.0=/home/ayush/MyApps/MyApplication/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_5d59dccf8d20d17424a65d89ecdbfa0e91db218e/classes.dex

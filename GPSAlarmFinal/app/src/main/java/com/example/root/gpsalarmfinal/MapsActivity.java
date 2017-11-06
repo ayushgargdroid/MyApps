@@ -48,6 +48,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     Marker destinationMarker,currentMarker;
     boolean onMapsReady = false;
     Button button;
+    int radius;
     private GoogleMap mMap;
     private FusedLocationProviderApi fusedLocationProviderApi;
 
@@ -63,6 +64,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         Log.d(TAG, "onCreate ...............................");
+        Intent intent = getIntent();
+        radius = intent.getIntExtra("radius",500);
         createLocation();
         fusedLocationProviderApi = LocationServices.FusedLocationApi;
         m2GoogleApiClient = new GoogleApiClient
@@ -221,6 +224,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         Intent intent = new Intent(getApplicationContext(),FinalActivity.class);
                         intent.putExtra("Start",mCurrentLocation);
                         intent.putExtra("Destination",destination);
+                        intent.putExtra("Radius",radius);
                         startActivity(intent);
                     }
                 });

@@ -37,7 +37,7 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
     MediaPlayer mediaPlayer;
     GoogleApiClient mGoogleApiClient;
     LocationRequest mLocationRequest;
-    float flag;
+    float flag,radius;
     EditText editText;
     private FusedLocationProviderApi fusedLocationProviderApi;
 
@@ -61,6 +61,9 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
         Intent intent = getIntent();
         start = intent.getParcelableExtra("Start");
         destination = intent.getParcelableExtra("Destination");
+        radius = (float)intent.getIntExtra("Radius",500);
+        Log.d("info","Received "+radius);
+        flag = radius;
         distance = start.distanceTo(destination);
         distanceText = (TextView)findViewById(R.id.distanceTextView);
         distanceText.setText(Float.toString(distance));
@@ -167,12 +170,4 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
         Log.d(TAG, "Connection failed: " + connectionResult.toString());
     }
 
-    public void startClock(View view){
-        editText = (EditText)findViewById(R.id.flag);
-        flag = Float.parseFloat(editText.getText().toString());
-        LinearLayout a = (LinearLayout)findViewById(R.id.lin1);
-        a.setAlpha(0f);
-        a = (LinearLayout)findViewById(R.id.lin2);
-        a.setAlpha(1f);
-    }
 }

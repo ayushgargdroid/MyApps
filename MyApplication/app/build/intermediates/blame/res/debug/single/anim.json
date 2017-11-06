@@ -1,0 +1,66 @@
+[
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_slide_in_top.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_in.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_bottom_sheet_slide_in.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_slide_out_bottom.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_fade_out.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_fab_out.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_fab_out.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_fade_in.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_slide_out_top.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_bottom_sheet_slide_out.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_slide_in_bottom.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_popup_exit.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_fab_in.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_fab_in.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_snackbar_in.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_snackbar_in.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/abc_popup_enter.xml",
+        "source": "/home/ayush/.android/build-cache/391b0b6224d513bac77ebef09bb1ac8f4300be43/output/res/anim/abc_popup_enter.xml"
+    },
+    {
+        "merged": "/home/ayush/MyApps/MyApplication/app/build/intermediates/res/merged/debug/anim/design_snackbar_out.xml",
+        "source": "/home/ayush/.android/build-cache/e7b484a8fc8aeb9aa3bf2887d6b2ebad34eb55d1/output/res/anim/design_snackbar_out.xml"
+    }
+]
