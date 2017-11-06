@@ -1,17 +1,21 @@
 package com.example.root.gpsalarmfinal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
+import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -33,8 +37,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback,com.google.android.gms.location.LocationListener,GoogleApiClient.ConnectionCallbacks,GoogleApiClient.OnConnectionFailedListener  {
 
-    private GoogleMap mMap;
-
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 1;
     private static final String TAG = "LocationActivity1";
     private static final long INTERVAL = 1000 * 10;
     private static final long FASTEST_INTERVAL = 1000 * 5;
@@ -42,13 +45,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     GoogleApiClient mGoogleApiClient;
     GoogleApiClient m2GoogleApiClient;
     Location mCurrentLocation,destination = new Location("Destination");
-    private FusedLocationProviderApi fusedLocationProviderApi;
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 1;
     Marker destinationMarker,currentMarker;
-
     boolean onMapsReady = false;
-
     Button button;
+    private GoogleMap mMap;
+    private FusedLocationProviderApi fusedLocationProviderApi;
 
     public void createLocation(){
         mLocationRequest = new LocationRequest();
@@ -81,16 +82,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mapFragment.getMapAsync(this);
     }
 
-
-    /**
-     * Manipulates the map once available.
-     * This callback is triggered when the map is ready to be used.
-     * This is where we can add markers or lines, add listeners or move the camera. In this case,
-     * we just add a marker near Sydney, Australia.
-     * If Google Play services is not installed on the device, the user will be prompted to install
-     * it inside the SupportMapFragment. This method will only be triggered once the user has
-     * installed Google Play services and returned to the app.
-     */
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -99,11 +90,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         // Add a marker in Sydney and move the camera
         onMapsReady = true;
     }
+
+
     @Override
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart fired ..............");
-        mGoogleApiClient.connect();
+        try {
+            mGoogleApiClient.connect();
+        } catch (Exception e) {
+            Log.d("Exception", e.toString());
+        }
     }
 
     @Override
@@ -123,6 +120,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         setCurrentLocation();
     }
 
+
     @Override
     protected void onPause() {
         super.onPause();
@@ -137,6 +135,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.d(TAG, "onConnected - isConnected ...............: " + mGoogleApiClient.isConnected());
+        LocationManager lm = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        if (!gps_enabled && !network_enabled) {
+            Log.d("Error", "GPS not Connected");
+            Toast.makeText(this, "GPS is not enabled. Opening Location Settings", Toast.LENGTH_LONG).show();
+            startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+        }
         startLocationUpdates();
     }
 

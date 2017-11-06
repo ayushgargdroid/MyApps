@@ -1,23 +1,23 @@
 package com.example.root.gpsalarmfinal;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.location.LocationManager;
 import android.media.MediaPlayer;
+import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -27,6 +27,10 @@ import com.google.android.gms.location.LocationServices;
 
 public class FinalActivity extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener,GoogleApiClient.ConnectionCallbacks,com.google.android.gms.location.LocationListener {
 
+    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 1;
+    private static final int INTERVAL = 1000 * 10;
+    private static final int FASTEST_INTERVAL = 1000 * 5;
+    private static final String TAG = "LocationActivity2";
     Location start,current,destination;
     Float distance;
     TextView distanceText;
@@ -34,12 +38,8 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
     GoogleApiClient mGoogleApiClient;
     LocationRequest mLocationRequest;
     float flag;
-    private static final int INTERVAL = 1000*10;
-    private static final int FASTEST_INTERVAL = 1000*5;
-    private static final String TAG = "LocationActivity2";
-    public static final int MY_PERMISSIONS_REQUEST_LOCATION = 1;
-    private FusedLocationProviderApi fusedLocationProviderApi;
     EditText editText;
+    private FusedLocationProviderApi fusedLocationProviderApi;
 
     public void setmLocationRequest(){
         mLocationRequest = new LocationRequest();
@@ -93,6 +93,25 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     public void onConnected(@Nullable Bundle bundle) {
         Log.d(TAG, "onConnected - isConnected ...............: " + mGoogleApiClient.isConnected());
+        LocationManager lm = (LocationManager) getApplicationContext().getSystemService(Context.LOCATION_SERVICE);
+        boolean gps_enabled = false;
+        boolean network_enabled = false;
+
+        try {
+            gps_enabled = lm.isProviderEnabled(LocationManager.GPS_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        try {
+            network_enabled = lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
+        } catch (Exception ex) {
+        }
+
+        if (!gps_enabled && !network_enabled) {
+            Log.d("Error", "GPS not Connected");
+            Toast.makeText(this, "GPS is not enabled. Opening Location Settings", Toast.LENGTH_LONG).show();
+            startActivityForResult(new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS), 0);
+        }
         startLocationUpdates();
     }
 
