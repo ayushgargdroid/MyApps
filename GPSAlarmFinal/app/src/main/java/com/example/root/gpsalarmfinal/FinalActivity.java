@@ -1,5 +1,10 @@
 package com.example.root.gpsalarmfinal;
 
+import android.app.IntentService;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -7,7 +12,9 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.provider.Settings;
+import android.support.annotation.IntDef;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -38,7 +45,7 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
     GoogleApiClient mGoogleApiClient;
     LocationRequest mLocationRequest;
     float flag,radius;
-    EditText editText;
+    int cancel = 0;
     private FusedLocationProviderApi fusedLocationProviderApi;
 
     public void setmLocationRequest(){
@@ -62,6 +69,7 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
         start = intent.getParcelableExtra("Start");
         destination = intent.getParcelableExtra("Destination");
         radius = (float)intent.getIntExtra("Radius",500);
+        cancel = intent.getIntExtra("Cancel",0);
         Log.d("info","Received "+radius);
         flag = radius;
         distance = start.distanceTo(destination);
@@ -73,8 +81,6 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
                 .build();
-
-
 
         Log.i("info","Exiting onCreate......");
     }
@@ -160,9 +166,34 @@ public class FinalActivity extends AppCompatActivity implements GoogleApiClient.
         Log.i("Location Lng",Double.toString(current.getLongitude()));
         distance = current.distanceTo(destination);
         distanceText.setText(Float.toString(distance));
-        if(distance<flag){
+        Log.d("info","Cancel: "+cancel);
+        if(distance<flag && cancel==0){
             mediaPlayer.start();
+            createNotif();
         }
+    }
+
+    public void createNotif(){
+        Intent intent1 = new Intent(this,FinalActivity.class);
+        intent1.putExtra("Start",start);
+        intent1.putExtra("Destination",destination);
+        intent1.putExtra("Radius",radius);
+        intent1.putExtra("Cancel",1);
+        Intent intent2 = new Intent(this,FinalActivity.class);
+        intent2.putExtra("Start",start);
+        intent2.putExtra("Destination",destination);
+        intent2.putExtra("Radius",radius);
+        intent2.putExtra("Cancel",0);
+        PendingIntent pIntent1 = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent1, 0);
+        PendingIntent pIntent2 = PendingIntent.getActivity(this, (int) System.currentTimeMillis(), intent2, 0);
+        Notification noti = new Notification.Builder(this)
+                .setContentTitle("Destination Reached")
+                .setContentText("Subject").setSmallIcon(R.mipmap.ic_launcher)
+                .setContentIntent(pIntent2)
+                .setAutoCancel(true)
+                .addAction(R.drawable.ic_cancel, "Stop", pIntent1).build();
+        NotificationManager notificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        notificationManager.notify(0, noti);
     }
 
     @Override

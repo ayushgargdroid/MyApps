@@ -225,6 +225,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                         intent.putExtra("Start",mCurrentLocation);
                         intent.putExtra("Destination",destination);
                         intent.putExtra("Radius",radius);
+                        intent.putExtra("Cancel",0);
                         startActivity(intent);
                     }
                 });
